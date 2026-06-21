@@ -3,9 +3,12 @@ import LatestProducts from '../LatestProducts/LatestProducts';
 import Loding from '../Loading/Loding';
 import Footer from '../Footer/Footer';
 import Banner from '../Banner/Banner';
+import useAxios from '../../hooks/useAxios';
 
 
-const latestProductPromis=fetch ('http://localhost:3000/latest-products').then(res=>res.json());
+
+const latestProductPromis=  fetch ('https://smart-deals-server-ecru.vercel.app/latest-products')
+.then(res=>res.json());
 
 const Home = () => {
     return (

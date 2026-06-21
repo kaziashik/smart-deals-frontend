@@ -16,7 +16,7 @@ const ProductsDetails = () => {
     //   using axios
 
     useEffect(() => {
-        axios.get(`http://localhost:3000/products/bids/${productId}`)
+        axios.get(`https://smart-deals-server-ecru.vercel.app/products/bids/${productId}`)
         .then(data=>{
             console.log("after Axios get", data);
             setBids(data.data)
@@ -29,7 +29,7 @@ const ProductsDetails = () => {
     // normal fatch
 
     // useEffect(() => {
-    //     fetch(`http://localhost:3000/products/bids/${productId}`)
+    //     fetch(`https://smart-deals-server-ecru.vercel.app/products/bids/${productId}`)
     //         .then(res => res.json())
     //         .then(data => {
     //             setBids(data);
@@ -61,7 +61,7 @@ const ProductsDetails = () => {
             status: 'pending'
         }
 
-        fetch('http://localhost:3000/bids', {
+        fetch('https://smart-deals-server-ecru.vercel.app/bids', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

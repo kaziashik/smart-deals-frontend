@@ -8,7 +8,7 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import RootLayout from './layouts/RootLayout.jsx';
 import Home from './components/Home/Home.jsx';
-import AllProducts from './components/AllProducts/AllProducts.jsx';
+
 import AuthProvider from './contexts/AuthProvider.jsx';
 import Register from './components/Register/Register.jsx';
 import Myproducts from './components/MyProducts/Myproducts.jsx';
@@ -17,6 +17,7 @@ import Login from './components/Login/Login.jsx';
 import PrivateRoute from './contexts/PrivateRoute.jsx';
 import ProductsDetails from './components/ProductsDetails/ProductsDetails.jsx';
 import CreateProduct from './components/CreateProduct/CreateProduct.jsx';
+import AllProduct from './components/AllProduct/AllProduct.jsx';
 
 
 const router = createBrowserRouter([
@@ -31,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/allProducts',
-        Component: AllProducts,
+        Component: AllProduct,
 
       },
       {
@@ -57,7 +58,7 @@ const router = createBrowserRouter([
       
       {
         path: 'productDetails/:id',
-        loader: ({ params }) => fetch(`http://localhost:3000/products/${params.id}`),
+        loader: ({ params }) => fetch(`https://smart-deals-server-ecru.vercel.app/products/${params.id}`),
         Component: ProductsDetails
       },
       {

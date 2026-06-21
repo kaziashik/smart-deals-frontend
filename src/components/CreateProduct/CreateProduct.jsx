@@ -54,7 +54,7 @@ const CreateProduct = () => {
         // send data to database using axiuse
 
 
-        // axios.post('http://localhost:3000/products',newProduct)
+        // axios.post('https://smart-deals-server-ecru.vercel.app/products',newProduct)
         // .then(data=>{
         //     console.log("axios chicke", data.data);
         //    if (data.data.insertedId) {
@@ -99,7 +99,7 @@ const CreateProduct = () => {
 
         // send data to database using normaly
 
-        // fetch('http://localhost:3000/products', {
+        // fetch('https://smart-deals-server-ecru.vercel.app/products', {
         //     method: 'post',
         //     headers: {
         //         'content-type': 'application/json'
